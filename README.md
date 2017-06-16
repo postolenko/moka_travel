@@ -1,1 +1,1 @@
-# http://postolenko.github.io/moka_trans/index.html
+# http://postolenko.github.io/moka_travel/index.html
