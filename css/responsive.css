@@ -228,6 +228,14 @@
 
 	/*-- Section 1 Promo Section --*/
 
+	.main-slider .slide img.desktop-img {
+	    display: none;
+	}
+
+	.main-slider .slide img.resp-img {
+	    display: block;
+	}
+
 	.search-good-block {
 	    padding: 15px 0 0 0;
 	}

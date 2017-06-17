@@ -8,9 +8,8 @@ $(document).ready(function() {
 
     // ----------------------------
 
-    var accordeonItemIndex;
-    var accordeonItemCount;
-    var parentAccordeonH;
+    var parentAccordeon;
+    var accordeonItemTxtHeight;
 
     // ----------------------------
 
@@ -24,10 +23,14 @@ $(document).ready(function() {
 
     // ----------------------------
 
+    var indexList;
+    var indexItemList;
+
+    // ----------------------------
+
     var attrDatapiker;
     var topCoor;
     var leftCoor;
-
     var parentEl;
     var indexDataPiker;
 
@@ -35,13 +38,9 @@ $(document).ready(function() {
 
     getFooterPosition();
 
-    getPaymentsAdvantagesColsSize();
-
     getHeaderFixedPosition();
 
     getPromoContentParams();
-
-    // getPaddingTopWrapperPosition();
 
     $(window).resize(function() {
 
@@ -70,10 +69,6 @@ $(document).ready(function() {
         }
 
         // -----------------------
-
-        getPaymentsAdvantagesColsSize();
-
-        // getPaddingTopWrapperPosition();
 
         getPromoContentParams();
 
@@ -204,12 +199,6 @@ $(document).ready(function() {
 
     $(function() {
 
-        // var accordeonIndex;
-
-        // var parentAccordeonH;
-
-        var indexAccorderon;
-
         $(".accordeon-item-title").click(function() {
 
             parentAccordeon = $(this).parent(".accordeon-item");
@@ -248,8 +237,8 @@ $(document).ready(function() {
 
     $(function() {
 
-        var indexList;
-        var indexItemList;
+        // var indexList;
+        // var indexItemList;
 
         for(indexList = 0; indexList <= $("ol.num-mark").length - 1; indexList++ ) {
 
@@ -266,7 +255,6 @@ $(document).ready(function() {
     });
 
     // ---------------------------------------------------------
-
 
      $(function() {
 
@@ -286,16 +274,6 @@ $(document).ready(function() {
 
 
     // ---------------------------------------------------------
-
-    function getPaymentsAdvantagesColsSize() {
-
-        // $(".side-col").css({
-
-        //     "width" : $(this).parent($(".payments-advantages") ).width() + "px"
-
-        // });
-
-    }
 
 
     function getFooterPosition() {
