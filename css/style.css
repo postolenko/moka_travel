@@ -761,7 +761,6 @@ a.sign-link:hover {
     padding: 3px 0;
 }
 
-
 /* ----- Responsive Menu Button ------ */
 
 .respmenubtn-box {
@@ -879,10 +878,6 @@ a.sign-link:hover {
 .promo-block-sect .row {
     position: relative;
     z-index: 2;
-}
-
-.main-slider-box {
-
 }
 
 .main-slider-box:before {
@@ -1154,14 +1149,6 @@ select {
     background-position: right 0;
 }
 
-.search-good-block {
-
-}
-
-.search-good-block .row-2 {
-
-}
-
 .search-good-block .row-2 .col {
     display: inline-block;
     vertical-align: top;
@@ -1195,7 +1182,6 @@ select {
 .search-good-block .row-2 .select-col:after {
     display: inline-block;
     vertical-align: middle;
-    /*width: 10%;*/
     position: absolute;
     top: 2px;
     right: 0;
@@ -1377,10 +1363,6 @@ select {
     color: #ffffff;
 }
 
-.date-picker-header {
-    
-}
-
 .date-picker-header h3 {
     display: inline-block;
     vertical-align: middle;
@@ -1559,7 +1541,6 @@ select {
     transition-timing-function: ease;
 }
 
-
 .search-good-block form .submit-btn:hover {
     background: rgba(255, 40, 40, 1);
 }
@@ -1574,10 +1555,6 @@ select {
     vertical-align: top;
     width: 20%;
     padding: 20px 2%;
-}
-
-.promo-thumbnails .inner {
-
 }
 
 .promo-thumbnails .icon-block {
@@ -2059,7 +2036,6 @@ p.descript {
     color: #333333;
 }
 
-
 /*-- /Section 6 Main Page --*/
 
 /*-- Section 7 Main Page --*/
@@ -2539,22 +2515,10 @@ footer {
     width: 29%;
 }
 
-.logo-footer-block {
-
-}
-
-.footer-logo {
-
-}
-
 .footer-logo img {
     width: 100%;
     max-width: 122px;
     height: auto;
-}
-
-.footer .col-2 {
-
 }
 
 .footer .col-2 .inner-col {
@@ -2627,9 +2591,6 @@ footer {
 .seo-text li a:hover {
     color: #ffffff;
     text-decoration: underline;
-}
-.tel-block {
-
 }
 
 .footer .tel-block .fa-mobile {
