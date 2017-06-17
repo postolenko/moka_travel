@@ -55,7 +55,6 @@ body {
     z-index: 2;
 }
 
-
 .content {
     position: relative;
     height: 100%;
@@ -359,7 +358,12 @@ a:active {
 
 .header {
     background: rgba(255, 255, 255, 1);
-    padding: 40px 0 0 0;
+    padding: 40px 0 0 0;    
+}
+
+.header-site {
+    position: relative;
+    z-index: 13;
 }
 
 .header .col {
@@ -383,7 +387,7 @@ a:active {
 
 .header .col-3 {
     width: 34%;
-    padding: 11px 0 0 0;
+    padding: 11px 0 0 2%;
     text-align: right;
 }
 
@@ -757,6 +761,109 @@ a.sign-link:hover {
     padding: 3px 0;
 }
 
+
+/* ----- Responsive Menu Button ------ */
+
+.respmenubtn-box {
+    display: none;
+    width: 44%;
+    text-align: center;
+    position: relative;
+    z-index: 11;
+}
+
+.respmenubtn {
+    display: inline-block;
+    vertical-align: middle;
+    width: 37px;
+    height: 28px;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    z-index: 8;
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+.respmenubtn span {
+    display: block;
+    width: 35px;
+    height: 4px;
+    border: 1px solid #fb6a4f;
+    background: rgba(251, 106, 79, 1);
+    margin: 0 0 5px 0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+
+    -webkit-transition-property: transform, border, background;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+
+    -moz-transition-property: transform, border, background;
+    -moz-transition-duration: .3s;
+    -moz-transition-timing-function: ease;
+
+    -ms-transition-property: transform, border, background;
+    -ms-transition-duration: .3s;
+    -ms-transition-timing-function: ease;
+
+    -o-transition-property: transform, border, background;
+    -o-transition-duration: .3s;
+    -o-transition-timing-function: ease;
+
+    transition-property: transform, border, background;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+}
+
+.respmenubtn span:last-child {
+    margin: 0;
+}
+
+.respmenubtn:active {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); 
+    -webkit-tap-highlight-color: transparent;
+}
+
+.respmenubtn:hover span {
+    border: 1px solid #92cdd3;
+    background: rgba(146, 205, 211, 1);
+}
+
+.respmenubtn.active span {
+    position: relative;
+    top: -1px;
+    border: 1px solid #fb6a4f;
+    background: rgba(251, 106, 79, 1);
+}
+
+.respmenubtn.active span:last-child {
+    display: none;
+}
+
+.respmenubtn.active span:first-child {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: 3px 0 0 0;
+    position: relative;
+    top: 3px;
+}
+
+.respmenubtn.active span:nth-child(2) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* ----- / Responsive Menu Button ------ */
+
+
 /*-------------------------------------------*/
 /* ----- CONTENT ------ */
 /*-------------------------------------------*/
@@ -864,13 +971,13 @@ a.sign-link:hover {
     width: 100%;
 }
 
-.icon-block {
+.promo-content .icon-block {
     display: table-cell;
     vertical-align: top;
     width: 220px;
 }
 
-.icon-block img {
+.promo-content .icon-block img {
     display: block;
     width: auto;
     height: auto;
@@ -893,6 +1000,11 @@ a.sign-link:hover {
     display: inline-block;
     vertical-align: top;
     margin: 3px 3px;
+}
+
+.br-block {
+    display: none;
+    height: 1px;
 }
 
 .input-block {
@@ -975,7 +1087,7 @@ a.sign-link:hover {
 }
 
 .reset-btn {
-    width: 22px;
+    width: 20px;
     height: 38px;
     cursor: pointer;
     border: 1px solid transparent;
@@ -1395,11 +1507,17 @@ select {
 
 /*--  /Data Piker --*/
 
-
-.search-good-block form button[type="submit"] {
+.submit-col {
     display: inline-block;
     vertical-align: top;
-    min-width: 308px;
+    width: 100%;
+    max-width: 308px;
+}
+
+.search-good-block form .submit-btn {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
     cursor: pointer;
     padding: 2px 2%;
     border: 1px solid transparent;
@@ -1442,7 +1560,7 @@ select {
 }
 
 
-.search-good-block form button[type="submit"]:hover {
+.search-good-block form .submit-btn:hover {
     background: rgba(255, 40, 40, 1);
 }
 
@@ -1547,6 +1665,11 @@ select {
     background-position: center;
     padding: 80px 0 51px 0;
 }
+
+.section-2 h2 {
+    position: relative;
+    z-index: 2;
+} 
 
 .two-cols-block {
     display: block;
@@ -1719,6 +1842,7 @@ p.descript {
     vertical-align: top;
     width: 33.33%;
     max-width: 260px;
+    text-align: center;
     padding: 10px 13px;
 }
 
@@ -1792,7 +1916,6 @@ p.descript {
 
 .float_el_2 {
     display: block;
-    width: 401px;
     height: auto;
     position: absolute;
     width: 574px;
@@ -1977,10 +2100,8 @@ p.descript {
 }
 
 .side-col {
-    display: table-cell;
-    vertical-align: top;
-    width: 31%;
     position: relative;
+    z-index: 2;
 }
 
 .payments-advantages p {
@@ -1993,9 +2114,6 @@ p.descript {
 
 .center-block-circle {
     position: relative;
-    display: table-cell;
-    vertical-align: top;
-    width: 38%;
     min-width: 314px;
 }
 
@@ -2013,28 +2131,29 @@ p.descript {
 
 .border-p {
     position: absolute;
+    width: 31%;
 }
 
 .border-p.p-1 {
-    top: 0;
-    right: 0;
+    top: 26px;
+    left: 0;
     text-align: right;
 }
 
 .border-p.p-2{
-    bottom: 0;
+    top: 26px;
     right: 0;
-    text-align: right;
 }
 
 .border-p.p-3 {
-    top: 0;
+    bottom: 4px;
     left: 0;
+    text-align: right;
 }
 
 .border-p.p-4 {
-    bottom: 0;
-    left: 0;
+    bottom: 4px;
+    right: 0;
 }
 
 
@@ -2174,14 +2293,14 @@ p.descript {
 
 .payments-systems {
     text-align: center;
-    margin: 27px 0 18px 0;
+    margin: 32px 0 23px 0;
 }
 
 .payments-systems .thumbnail {
     display: inline-block;
     vertical-align: top;
     width: auto;
-    padding: 10px 18px;
+    padding: 5px 18px;
 }
 
 .payments-systems .inner {
@@ -2454,11 +2573,11 @@ footer {
 }
 
 .seo-text {
-    
+    text-align: left;
 }
 
 .seo-text li {
-    display: block;
+    text-align: left;
 }
 
 .seo-text li a {
@@ -2470,25 +2589,25 @@ footer {
     line-height: 16px;
     font-weight: normal;
     color: #333333;
-    border-bottom: 1px solid transparent;
+    text-decoration: none;
 
-    -webkit-transition-property: color, border-bottom;
+    -webkit-transition-property: color;
     -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
 
-    -moz-transition-property: color, border-bottom;
+    -moz-transition-property: color;
     -moz-transition-duration: .3s;
     -moz-transition-timing-function: ease;
 
-    -ms-transition-property: color, border-bottom;
+    -ms-transition-property: color;
     -ms-transition-duration: .3s;
     -ms-transition-timing-function: ease;
 
-    -o-transition-property: color, border-bottom;
+    -o-transition-property: color;
     -o-transition-duration: .3s;
     -o-transition-timing-function: ease;
 
-    transition-property: color, border-bottom;
+    transition-property: color;
     transition-duration: .3s;
     transition-timing-function: ease;
 }
@@ -2496,18 +2615,18 @@ footer {
 .seo-text li a:link,
 .seo-text li a:visited {
     color: #333333;
-    border-bottom: 1px solid transparent;
+    text-decoration: none;
 }
 
 .seo-text li a:active,
 .seo-text li a.active {
     color: #ffffff;
-    border-bottom: 1px solid #ffffff;
+    text-decoration: underline;
 }
 
 .seo-text li a:hover {
     color: #ffffff;
-    border-bottom: 1px solid #ffffff;
+    text-decoration: underline;
 }
 .tel-block {
 

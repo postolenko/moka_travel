@@ -13,11 +13,13 @@
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 	<link rel="stylesheet" type="text/css" href="slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.mCustomScrollbar.css">
 	<link rel="stylesheet" href="vendors/css/select2.css" >
 	<script type="text/javascript" src="vendors/js/jquery.js"></script>
 	<script type="text/javascript" src="slick/slick.js"></script>
 	<script src="vendors/js/parallax.js"></script>
 	<script type="text/javascript" src="vendors/js/smoothscroll.js"></script>
+	<script type="text/javascript" src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script type="text/javascript" src="vendors/js/select2.js"></script>
 	<script type="text/javascript" src="vendors/js/wow.min.js"></script>
 	<script>new WOW().init();</script>
@@ -34,7 +36,7 @@
 
 		<header>
 
-			<div class="header">
+			<div class="header header-site">
 				
 				<div class="header-row offset-ziro">
 					
@@ -47,9 +49,9 @@
 
 						</div>
 
-						<div class="col-row row-2">	
+						<div class="col-row row-2">
 
-							<div class="main-nav-block">
+							<div class="main-nav-block scroll">
 								<ul class="main-nav">
 									<li><a href="#">О нас</a></li>
 									<li><a href="#">Вопросы и ответы</a></li>
@@ -58,13 +60,23 @@
 								</ul>
 							</div>
 
-						</div>
+							<div class="respmenubtn-box">
+
+								<button class="respmenubtn">					
+									<span></span>
+									<span></span>
+									<span></span>
+								</button>
+
+							</div>
+
+						</div>						
 
 					</div>
 
 					<div class="col col-2">
 						<div class="logo-block">
-							<a href="#" class="logo wow zoomIn">
+							<a href="#" class="logo">
 								<img src="img/logo.png" alt="">
 							</a>
 						</div>
@@ -139,14 +151,17 @@
 													<i class="mark-icon icon-1"></i>
 													<input type="text" placeholder="Из города или аэропорта" />
 												</div>
-												<div class="search-col">
+												<div class="search-col arrows-col">
 													<i class="return-arrows"></i>
 												</div>
 												<div class="input-block search-col">
 													<i class="mark-icon icon-2"></i>
 													<input type="text" placeholder="Из города или аэропорта" />
 												</div>
-												<div class="input-block search-col date-picker-col">													
+
+												<div class="br-block br-block-1"></div>
+
+												<div class="input-block search-col date-picker-col">						
 
 													<button type="button" class="date-piker-btn show_datepiker" data-datepiker-btn = "date-picker_1">
 														<i class="date-piker-icon icon-1"></i>
@@ -155,6 +170,9 @@
 													<button type="button" class="reset-btn"></button>
 
 												</div>
+
+												<div class="br-block br-block-2"></div>
+
 												<div class="input-block search-col date-picker-col">
 													<button type="button" class="date-piker-btn show_datepiker" data-datepiker-btn = "date-picker_2">
 														<i class="date-piker-icon icon-2"></i></button>
@@ -162,6 +180,9 @@
 													<button type="button" class="reset-btn"></button>
 
 												</div>
+
+												<div class="br-block br-block-3"></div>
+
 												<div class="input-block search-col select-col">
 													<i class="fa fa-user-o" aria-hidden="true"></i>
 													<select>
@@ -180,6 +201,7 @@
 														<option>По пути зайти к дорогому человеку</option>
 													</select>
 												</div>
+												<div class="br-block br-block-4"></div>
 												<div class="col select-col">
 													<label>Вид билета:</label>
 													<select>
@@ -188,6 +210,7 @@
 														<option>Классои Люкс</option>
 													</select>
 												</div>
+												<div class="br-block br-block-5"></div>
 												<div class="col">
 													<div class="checkbox-block">
 														<input type="checkbox" id="ch_1" name="choise">
@@ -201,7 +224,7 @@
 													</div>
 												</div>
 												<div class="col submit-col">
-													<button type="submit">Искать</button>
+													<button class="submit-btn" type="submit">Искать</button>
 												</div>
 											</div>
 										</form>
@@ -578,7 +601,7 @@
 
 					<div class="payments-advantages">
 
-						<div class="side-col">
+						<div class="side-col side-col-1">
 						
 							<p class="border-p p-1">Скрытых комиссий</p>
 							<p class="border-p p-2">Комиссия на перелетах<br /> по России</p>
@@ -601,7 +624,7 @@
 
 						</div>
 
-						<div class="side-col">
+						<div class="side-col side-col-2">
 
 							<p class="border-p p-3">Комиссия за обмен и<br /> возврат билетов</p>
 							<p class="border-p p-4">Комиссия на многих<br /> международных перелетах</p>
@@ -931,6 +954,16 @@
 		<script src="js/scripts.js"></script>
 
 		<script type="text/javascript">
+
+		(function($){
+
+			$(window).on("load",function(){
+
+				$(".scroll").mCustomScrollbar();
+
+			});
+
+		})(jQuery);	
 			
 			$(".main-slider").not('.slick-initialized').slick({
 		      dots: false,
